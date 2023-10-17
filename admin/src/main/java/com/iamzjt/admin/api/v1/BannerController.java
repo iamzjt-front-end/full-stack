@@ -1,12 +1,16 @@
 package com.iamzjt.admin.api.v1;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class BannerController {
-  @GetMapping("/test")
+  // RestFul API
+  // 自描述性
+  // host:port/v1/banner/test
+
+  @GetMapping("v1/banner/test")
   public String test() {
-    return "Hello World!";
+    return "hello, IamZJT!";
   }
 }
