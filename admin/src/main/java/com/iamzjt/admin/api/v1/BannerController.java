@@ -1,21 +1,13 @@
 package com.iamzjt.admin.api.v1;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@Controller
-//@ResponseBody
+@RequestMapping("/v1/banner")
 public class BannerController {
-  // RestFul API
-  // 自描述性
-  // host:port/v1/banner/test
-
-  @GetMapping("v1/banner/test")
-  // @PostMapping
-  // @PutMapping
-  // @DeleteMapping
-  // @RequestMapping
+  @GetMapping("/test")
   public String test() {
     return "hello, IamZJT!";
   }
