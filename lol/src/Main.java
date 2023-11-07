@@ -52,6 +52,7 @@ public class Main {
     }
 
     iSkill.r();
+    // 单纯的interface可以统一方法的调用，但是它不能统一对象的实例化
   }
 
   private static String getPlayerInput() {
