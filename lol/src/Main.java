@@ -6,11 +6,12 @@ import abstraction.hero.Darius;
 import abstraction.hero.Diana;
 import abstraction.hero.Irelia;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
   // public static void main(String[] args) {
-  //   System.out.println("Enter a Hero's Name");
+  //   System.out.println("Enter a Hero's Name:");
   //   String heroName = Main.getPlayerInput();
   //
   //   switch (heroName) {
@@ -30,25 +31,27 @@ public class Main {
   //   }
   // }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
+    System.out.println("Enter a Hero's Name:");
     String name = Main.getPlayerInput();
     ISkill iSkill;
 
     switch (name) {
       case "Diana" -> {
         iSkill = new Diana();
-        iSkill.r();
       }
       case "Irelia" -> {
         iSkill = new Irelia();
-        iSkill.r();
       }
       case "Darius" -> {
         iSkill = new Darius();
-        iSkill.r();
       }
-      default -> System.out.println("Hero not found");
+      default -> {
+        throw new Exception("Hero not found");
+      }
     }
+
+    iSkill.r();
   }
 
   private static String getPlayerInput() {
