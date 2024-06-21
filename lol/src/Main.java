@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // import awkward.hero.Darius;
 // import awkward.hero.Diana;
 // import awkward.hero.Irelia;
@@ -7,9 +9,11 @@
 // import abstraction.hero.Diana;
 // import abstraction.hero.Irelia;
 
-import java.util.Scanner;
-import factory.HeroFactory;
-import factory.ISkill;
+// import factory.HeroFactory;
+// import factory.ISkill;
+
+import reflect.HeroFactory;
+import reflect.ISkill;
 
 public class Main {
   // * v1
@@ -65,7 +69,7 @@ public class Main {
   //   // * 7. 代码中总是会存在不稳定，隔离这些不稳定，保证其他代码是稳定的
   // }
 
-  // * v3
+  // * v3 v4
   public static void main(String[] args) throws Exception {
     System.out.println("Enter a Hero's Name:");
     String name = Main.getPlayerInput();
