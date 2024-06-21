@@ -62,6 +62,7 @@ public class Main {
   //   // * 4. 上面这段话只是表象，实质是一段代码如果要保持稳定，就不应该出现对象的实例化。真正的原因是：new 的出现，会导致代码的耦合度增加
   //   // * 5. 对象实例化是不可消除的
   //   // * 6. 把对象实例化的过程，转移到其他的代码片段中。放到了一个工厂类中，这样就可以消除代码中的 new
+  //   // * 7. 代码中总是会存在不稳定，隔离这些不稳定，保证其他代码是稳定的
   // }
 
   // * v3
@@ -71,6 +72,8 @@ public class Main {
     ISkill iSkill = HeroFactory.getHero(name);
 
     iSkill.r();
+    // 抽象工厂
+    // IHeroFactory heroFactory = new HeroFactory();
   }
 
   private static String getPlayerInput() {
